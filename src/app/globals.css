@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-main font-font-main;
+/* 必要ならここにカスタムテーマを書く（今は未使用）
+@theme {
+  --color-main: #ffffff;
+}
+*/
+
+@layer base {
+  body {
+    @apply bg-white font-sans text-black;
+  }
 }

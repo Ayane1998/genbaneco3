@@ -1,4 +1,5 @@
-// src/app/page.tsx
+import Link from 'next/link'; // 追加
+
 export default function Home() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-10">
@@ -13,9 +14,12 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-4">最新の投稿</h2>
         <ul className="space-y-2">
           <li>
-            <a href="/blog/first-post" className="text-blue-600 hover:underline">
+            <Link
+              href="/blog/first-post"
+              className="text-blue-600 hover:underline"
+            >
               初めての投稿
-            </a>
+            </Link>
             <span className="block text-sm text-gray-500">2025年7月21日</span>
           </li>
         </ul>
