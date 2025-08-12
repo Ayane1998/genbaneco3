@@ -18,9 +18,6 @@ export default function Header() {
           <Link href="/blog" className="hover:text-gray-600 no-underline">
             ブログ
           </Link>
-          <Link href="/contact" className="hover:text-gray-600 no-underline">
-            コンタクト
-          </Link>
         </div>
       </nav>
     </header>
