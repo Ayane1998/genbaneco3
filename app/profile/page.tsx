@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -18,6 +17,7 @@ const profile = {
   name: "Genbaneco",
   born: "1998",
   role: "Aerospace QA / Enjoy Music",
+  location: "Japan",
   skills: ["Special aviation radio operator"],
   tools: ["macOS"],
   experience: [
@@ -42,25 +42,9 @@ export default function ProfilePage() {
     <main className="mx-auto max-w-4xl px-4 py-10">
       {/* Header */}
       <section className="mb-10">
-        <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-end">
-          <div className="relative h-28 w-28 overflow-hidden rounded-2xl shadow">
-            <Image
-              src={profile.avatarSrc}
-              alt={profile.name}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-          <div className="flex-1">
-            <h1 className="text-3xl font-bold tracking-tight">{profile.name}</h1>
-            <p className="mt-1 text-base text-gray-600 dark:text-gray-300">
-              {profile.role}
-            </p>
-            <p className="mt-1 text-sm text-gray-500">{profile.location}</p>
-            <p className="mt-1 text-sm text-gray-500">Born: {profile.born}</p>
-          </div>
-        </div>
+        <h1 className="text-3xl font-bold tracking-tight">{profile.name}</h1>
+        <p className="mt-1 text-base text-gray-600 dark:text-gray-300">{profile.role}</p>
+        <p className="mt-1 text-sm text-gray-500">Born: {profile.born}</p>
       </section>
 
       {/* Skills & Tools */}
@@ -120,9 +104,7 @@ export default function ProfilePage() {
             "@type": "Person",
             name: profile.name,
             url: "https://genbaneco3.vercel.app/profile",
-            jobTitle: profile.role,
-            address: { "@type": "PostalAddress", addressLocality: profile.location },
-          }),
+            jobTitle: profile.role,          }),
         }}
       />
     </main>
