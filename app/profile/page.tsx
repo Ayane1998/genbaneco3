@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MutableRequestCookiesAdapter } from "next/dist/server/web/spec-extension/adapters/request-cookies";
 
 export const metadata: Metadata = {
   title: "Profile | Genbaneco",
@@ -18,9 +19,17 @@ const profile = {
   born: "1998",
   role: "Aerospace QA / Enjoy Music",
   location: "Japan",
-  skills: ["Special aviation radio operator"],
-  tools: ["macOS"],
-  experience: [
+  skills: [
+    {
+        title:"Special aviation radio operator,second degree black belt in Karate"
+    }
+  ],
+  tools: [
+    {
+        title:"Macintosh,GitHub,etc..."
+    }
+  ],
+  occupation: [
     {
       title: "Heavy Industry",
       role: "QA",
@@ -32,7 +41,21 @@ const profile = {
     },
   ],
   education: [
-    { Bachelor: "Science" },
+    { 
+        Bachelor: "Bachelor of Science"
+     },
+  ],
+  music: [
+    {
+        title:"Love",
+        role: "The Beatles,Tetsuya Komuro,YMO,play brass instruments and am currently studying the piano"
+    }
+  ],
+   Pastimes: [
+    {
+        title:"I have an appreciation for...",
+        role: "gin, whisky, and cocktails based on them"
+    }
   ],
 };
 // ================================================
@@ -61,7 +84,7 @@ export default function ProfilePage() {
       <section className="mb-10">
         <h2 className="mb-4 text-xl font-semibold">Experience</h2>
         <div className="space-y-5">
-          {profile.experience.map((exp) => (
+          {profile.occupation.map((exp) => (
             <div key={exp.title} className="rounded-2xl border p-4 dark:border-gray-800">
               <h3 className="text-base font-semibold">{exp.title}</h3>
               <p className="mt-0.5 text-sm text-gray-600 dark:text-gray-400">{exp.role}</p>
