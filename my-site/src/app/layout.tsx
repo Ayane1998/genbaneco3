@@ -1,12 +1,20 @@
 // src/app/layout.tsx
-import "./globals.css";
+import type { Metadata } from "next";
+import "./globals.css"; // グローバルCSSがある場合
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {
+  title: "Genbaneco",
+  description: "Genbaneco site",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="ja">
-      <body className="bg-white text-black font-sans antialiased">
-        {children}
-      </body>
+      <body className="min-h-screen">{children}</body>
     </html>
   );
 }
