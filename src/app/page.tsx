@@ -7,6 +7,7 @@ export default function Home() {
         <h1 className="text-3xl font-bold mb-4">Genbaneco</h1>
         <p className="text-lg">
           音楽大好き 毎日がげんばねこ案件な重工社員の日常「genbaneco」へようこそ。
+          （時々改修工事をしてエラー出るかもしれないです）
         </p>
       </section>
 

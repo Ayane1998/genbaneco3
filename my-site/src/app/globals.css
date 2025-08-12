@@ -1,9 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  body {
-    @apply bg-white font-sans; /* ✅ font-font-main → font-sans */
-  }
-}
+/* src/app/globals.css */
+@import "tailwindcss";
