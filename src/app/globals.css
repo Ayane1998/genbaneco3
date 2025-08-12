@@ -1,15 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* src/app/globals.css */
+@import "tailwindcss";
 
-/* 必要ならここにカスタムテーマを書く（今は未使用）
-@theme {
-  --color-main: #ffffff;
-}
-*/
-
-@layer base {
-  body {
-    @apply bg-white font-sans text-black;
-  }
+body {
+  /* bg-white だけ CSS に置き換え */
+  background-color: #fff;
+  @apply font-sans text-black;
 }
