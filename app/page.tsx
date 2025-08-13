@@ -6,14 +6,23 @@ export default function Home() {
       <section className="mb-12">
         <h1 className="text-3xl font-bold mb-4">Genbaneco</h1>
         <p className="text-lg">
-  音楽大好き 毎日がげんばねこ案件な重工社員の日常へようこそ
+  音楽大好き。毎日が“げんばねこ”案件な重工社員の日常へようこそ
 </p>
 <p className="text-lg mt-2 text-gray-700">
-  （時々改修工事失敗してしてエラー出るかもしれないです。ご愛嬌で♡）
+  （時々、改修工事失敗してエラーが出るかもしれません。ご愛嬌で♡）
 </p>
-<p className="text-lg mt-2 text-gray-700">
-</p>
-  各種お問い合わせは、Twitter DMまで!
+<div className="mt-4">
+  <a
+    href="https://x.com/rg16dr8c9qcEh4y"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center rounded-full border px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
+    aria-label="X（旧Twitter）でDM"
+  >
+    X（旧Twitter）でDMする（@rg16dr8c9qcEh4y）
+    <span className="ml-1" aria-hidden>→</span>
+  </a>
+</div>
 
       </section>
 
