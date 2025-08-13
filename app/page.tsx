@@ -11,7 +11,8 @@ export default function Home() {
 <p className="text-lg mt-2 text-gray-700">
   （時々改修工事失敗してしてエラー出るかもしれないです。ご愛嬌で♡）
 </p>
-<p className="text-lg mt-2 text-gray-700"></p>
+<p className="text-lg mt-2 text-gray-700">
+</p>
   各種お問い合わせは、Twitter DMまで!
 
       </section>
