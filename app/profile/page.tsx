@@ -43,13 +43,14 @@ const profile: Profile = {
   role: "Aerospace QA / Enjoy Music",
   location: "Japan",
   skills: [
-    {
-      title:
-        "Special aviation radio operator, second degree black belt in Karate",
-    },
-  ],
-  tools: [{ title: "Macintosh, GitHub, etc..." }],
-  occupation: [{ title: "Heavy Industry", role: "QA" }],
+  { title: "Special aviation radio operator" },
+  { title: "Second-degree black belt in Karate" },
+],
+tools: [
+  { title: "Macintosh" },
+  { title: "GitHub" },
+],
+  occupation: [{ title: "Heavy Industry", role: "Quality Assurance" }],
   challenge: [{ title: "The Second Class Electric Works Specialist" }],
   education: [{ Bachelor: "Bachelor of Science" }],
   music: [
