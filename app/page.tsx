@@ -6,11 +6,12 @@ export default function Home() {
       <section className="mb-12">
         <h1 className="text-3xl font-bold mb-4">Genbaneco</h1>
         <p className="text-lg">
-  音楽大好き 毎日がげんばねこ案件な重工社員の日常「genbaneco」へようこそ。
+  音楽大好き 毎日がげんばねこ案件な重工社員の日常へようこそ。
 </p>
 <p className="text-lg mt-2 text-gray-700">
   （時々改修工事失敗してしてエラー出るかもしれないです。ご愛嬌で♡）
 </p>
+  各種お問い合わせは、Twitter DMまで!
 
       </section>
 
@@ -24,7 +25,7 @@ export default function Home() {
             >
               初めての投稿
             </Link>
-            <span className="block text-sm text-gray-500">2025年7月21日</span>
+            <span className="block text-sm text-gray-500">2025年8月12日</span>
           </li>
         </ul>
       </section>
