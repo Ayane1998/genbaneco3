@@ -9,3 +9,20 @@
   margin-bottom: 3em;    /* 下にも同じ余白 */
   content: "";
 }
+
+/* 段落の先頭にある太字を「見出し」風に大きく表示 */
+.prose p > strong:first-child {
+  display: block;        /* 行頭の太字をブロック要素化 */
+  font-weight: 700;
+  font-size: 1.5rem;     /* 24px相当。必要なら 1.75rem, 2rem に調整 */
+  line-height: 1.35;
+  margin-top: 1.5em;     /* 上に余白 */
+  margin-bottom: 0.5em;  /* 下に少し余白 */
+}
+
+/* 文中の太字は従来通り */
+.prose p strong:not(:first-child) {
+  font-size: inherit;
+  font-weight: 700;
+}
+
