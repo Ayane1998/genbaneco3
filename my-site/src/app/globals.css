@@ -1,10 +1,11 @@
 /* src/app/globals.css */
 @import "tailwindcss";
 
-/* prose 内の <br> を段落2つ分くらいの余白に */
+/* prose 内の <br> を大きな余白に統一 */
 .prose br {
-  display: block;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  display: block;        /* 改行をブロック要素化 */
+  height: 0;             /* 高さはゼロにしておく */
+  margin-top: 3em;       /* 上に段落約2つ分の余白 */
+  margin-bottom: 3em;    /* 下にも同じ余白 */
   content: "";
 }
