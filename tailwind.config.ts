@@ -1,10 +1,13 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.ts
+import type { Config } from 'tailwindcss';
+
 export default {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}', // 併用しているなら
+    './src/**/*.{js,ts,jsx,tsx,mdx}',   // 使っているなら
   ],
-  theme: {
-    extend: {},
-  },
+  theme: { extend: {} },
   plugins: [],
-};
+} satisfies Config;
