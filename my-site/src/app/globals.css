@@ -1,2 +1,12 @@
 /* src/app/globals.css */
 @import "tailwindcss";
+
+/* --- ここからカスタムスタイル --- */
+
+/* prose 内の <br> に大きめの余白を与える */
+.prose br {
+  display: block;
+  margin-top: 4.5em;    /* 上に3行分くらい */
+  margin-bottom: 4.5em; /* 下に3行分くらい */
+  content: "";
+}
