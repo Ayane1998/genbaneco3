@@ -2,15 +2,10 @@
 import { getPostHtmlBySlug } from '@/lib/posts'
 import { notFound } from 'next/navigation'
 
-type Props = {
-  // ← 既存プロジェクトの想定に合わせて Promise で受ける
-  params: Promise<{ slug: string }>
-}
+type Props = { params: Promise<{ slug: string }> }
 
 export default async function BlogPost({ params }: Props) {
-  // ← Promise なので await が必要
   const { slug } = await params
-
   const post = await getPostHtmlBySlug(slug)
   if (!post) notFound()
 
@@ -21,13 +16,9 @@ export default async function BlogPost({ params }: Props) {
         {new Date(post.meta.date).toLocaleDateString('ja-JP')}
       </p>
 
-      {/* ← Typography を効かせるために prose を付与 */}
-      <div className="prose prose-lg leading-loose">
-        {post.contentHtml ? (
-          <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
-        ) : (
-          <p>本文がありません</p>
-        )}
+      {/* Markdown本文：Typographyを効かせ、行間を少し詰める */}
+      <div className="prose prose-lg leading-normal">
+        <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
       </div>
     </article>
   )
