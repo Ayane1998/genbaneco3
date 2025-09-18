@@ -21,7 +21,7 @@
 .prose p > strong:first-child {
   display: block;
   font-weight: 700;
-  font-size: 1.5rem;   /* 24px相当。必要に応じて調整可 */
+  font-size: 1.0rem;   /* 24px相当。必要に応じて調整可 */
   line-height: 1.35;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
