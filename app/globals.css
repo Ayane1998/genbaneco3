@@ -23,8 +23,8 @@
   font-weight: 700;
   font-size: 1.0rem;   /* 24px相当。必要に応じて調整可 */
   line-height: 1.35;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 }
 
 /* 文中の太字は従来通り */
