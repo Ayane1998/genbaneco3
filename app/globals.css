@@ -1,25 +1,33 @@
 /* app/globals.css */
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";  /* ← これが必須（v4の書き方） */
+@plugin "@tailwindcss/typography";  /* ← Tailwind v4 の書き方 */
 
-/* <br> を大きな空白に */
+/* <br> を大きな空白に統一 */
 .prose br {
   display: block;
   height: 0;
-  margin-top: 3em;   /* 段落2つ分くらい */
+  margin-top: 3em;   /* 段落約2つ分の余白 */
   margin-bottom: 3em;
   content: "";
 }
 
-/* （任意）段落先頭の太字を見出し風に */
+/* 段落間の余白を狭める */
+.prose p {
+  margin-top: 0.75em;     /* デフォルトより小さめ */
+  margin-bottom: 0.75em;
+}
+
+/* 段落先頭の太字を「見出し」風に大きく表示 */
 .prose p > strong:first-child {
   display: block;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.5rem;   /* 24px相当。必要に応じて調整可 */
   line-height: 1.35;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
+
+/* 文中の太字は従来通り */
 .prose p strong:not(:first-child) {
   font-size: inherit;
   font-weight: 700;
