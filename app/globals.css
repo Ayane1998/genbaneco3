@@ -1,1 +1,26 @@
+/* app/globals.css */
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";  /* ← これが必須（v4の書き方） */
+
+/* <br> を大きな空白に */
+.prose br {
+  display: block;
+  height: 0;
+  margin-top: 3em;   /* 段落2つ分くらい */
+  margin-bottom: 3em;
+  content: "";
+}
+
+/* （任意）段落先頭の太字を見出し風に */
+.prose p > strong:first-child {
+  display: block;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.35;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+.prose p strong:not(:first-child) {
+  font-size: inherit;
+  font-weight: 700;
+}
