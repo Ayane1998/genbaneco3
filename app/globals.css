@@ -1,6 +1,6 @@
 /* app/globals.css */
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";  /* ← Tailwind v4 の書き方 */
+@plugin "@tailwindcss/typography";
 
 /* <br> を大きな空白に統一 */
 .prose br {
