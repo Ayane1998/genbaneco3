@@ -1,16 +1,17 @@
-import { getPostHtmlBySlug } from '@/lib/posts';
-import { notFound } from 'next/navigation';
+// app/blog/[slug]/page.tsx
+import { getPostHtmlBySlug } from '@/lib/posts'
+import { notFound } from 'next/navigation'
 
 type Props = {
-  params: Promise<{ slug: string }>; // Promise型に変更
-};
+  params: { slug: string }
+}
 
 export default async function BlogPost({ params }: Props) {
-  const { slug } = await params; // await 必須
-  const post = await getPostHtmlBySlug(slug);
+  const { slug } = params
+  const post = await getPostHtmlBySlug(slug)
 
   if (!post) {
-    notFound();
+    notFound()
   }
 
   return (
@@ -27,5 +28,5 @@ export default async function BlogPost({ params }: Props) {
         )}
       </div>
     </article>
-  );
+  )
 }

@@ -1,8 +1,8 @@
 /* src/app/globals.css */
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";   /* ← これを追加 */
+@plugin "@tailwindcss/typography";  /* ← これが無いと見出しは大きくなりません */
 
-/* prose 内の <br> を大きな余白に統一 */
+/* ここからあなたのカスタム */
 .prose br {
   display: block;
   height: 0;
@@ -11,17 +11,15 @@
   content: "";
 }
 
-/* 段落の先頭にある太字を「見出し」風に大きく表示 */
 .prose p > strong:first-child {
   display: block;
   font-weight: 700;
-  font-size: 1.5rem;   /* 24px。必要なら 1.75rem や 2rem に調整 */
+  font-size: 1.5rem;
   line-height: 1.35;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
 
-/* 文中の太字は従来通り */
 .prose p strong:not(:first-child) {
   font-size: inherit;
   font-weight: 700;
