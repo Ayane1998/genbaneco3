@@ -17,7 +17,7 @@ export default async function BlogPost({ params }: Props) {
       </p>
 
       {/* Markdown本文：Typographyを効かせ、行間を少し詰める */}
-      <div className="prose prose-lg leading-normal">
+      <div className="prose prose-lg leading-snug">
         <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
       </div>
     </article>
