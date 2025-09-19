@@ -10,7 +10,7 @@ export default async function BlogPost({ params }: Props) {
   if (!post) notFound()
 
   return (
-    <article className="max-w-3xl mx-auto px-4 py-10">
+    <article className="max-w-4xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-2">{post.meta.title}</h1>
       <p className="text-gray-500 mb-6">
         {new Date(post.meta.date).toLocaleDateString('ja-JP')}
