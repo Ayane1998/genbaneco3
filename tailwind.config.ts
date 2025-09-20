@@ -7,14 +7,15 @@ export default {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
-    './content/**/*.{md,mdx}', // 記事フォルダ
+    './content/**/*.{md,mdx}',
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Zen Kurenaido"', 'sans-serif'], // ← 全体の sans を Zen Kurenaido に
+        // Tailwind v4 推奨：CSS 変数をフォントに使う
+        sans: ['var(--font-sans)'],
       },
     },
   },
-  plugins: [], // ← v4では不要。globals.css 側で @plugin を使う
+  plugins: [], // Typography は globals.css の @plugin で読み込み
 } satisfies Config

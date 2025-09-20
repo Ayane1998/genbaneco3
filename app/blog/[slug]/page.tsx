@@ -16,11 +16,10 @@ export default async function BlogPost({ params }: Props) {
         {new Date(post.meta.date).toLocaleDateString('ja-JP')}
       </p>
 
-      {/* Markdown本文：Typographyを効かせ、行間を少し詰める */}
-      <div className="prose prose-lg leading-snug">
+      {/* Markdown本文：幅上限を 80ch に拡張し、中央に配置。行間は少し詰める */}
+      <div className="prose prose-lg leading-snug mx-auto max-w-[80ch]">
         <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
       </div>
     </article>
   )
 }
-
