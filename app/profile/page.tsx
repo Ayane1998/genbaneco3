@@ -70,11 +70,20 @@ export default function ProfilePage() {
       </section>
 
       {/* Tools */}
-      <section className="mb-10">
-        <Card title="Tools">
-          <BadgeList items={profile.tools} />
-        </Card>
-      </section>
+<section className="mb-10">
+  <h2 className="mb-4 text-xl font-semibold">Tools</h2>
+  <ul className="space-y-2 text-[15px] text-gray-800 dark:text-gray-200">
+    {profile.tools.map((t, index) => (
+      <li
+        key={index}
+        className="rounded-2xl border p-4 dark:border-gray-800"
+      >
+        <p className="font-medium">{t.title}</p>
+      </li>
+    ))}
+  </ul>
+</section>
+
 
       {/* Education */}
       <section className="mb-10">
