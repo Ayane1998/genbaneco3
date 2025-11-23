@@ -40,30 +40,25 @@ type Profile = {
 const profile: Profile = {
   name: "Genbaneco",
   born: "1998",
-  role: "Aerospace QA / Enjoy Music",
+  role: "Aerospace H.I. QA / Enjoy Music",
   location: "Japan",
-  skills: [
-  { title: "Special aviation radio operator" },
-  { title: "Second-degree black belt in Karate" },
-],
+
 tools: [
   { title: "Macintosh" },
-  { title: "GitHub" },
 ],
-  occupation: [{ title: "Heavy Industry", role: "Quality Assurance" }],
-  challenge: [{ title: "The Second Class Electric Works Specialist" }],
-  education: [{ Bachelor: "Bachelor of Science" }],
+  education: [{ Bachelor: "理学学士" }],
+  
   music: [
     {
       title: "Love",
       role:
-        "The Beatles, Tetsuya Komuro, YMO; play brass instruments and am currently studying the piano",
+        "The Beatles, 小室哲哉, J-POP全般",
     },
   ],
   Pastimes: [
     {
-      title: "I have an appreciation for...",
-      role: "gin, whisky, and cocktails based on them",
+      title: "趣味は少ないけれど…",
+      role: "お酒を嗜みたいお年頃かもしれない",
     },
   ],
 };
