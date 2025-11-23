@@ -16,8 +16,6 @@ export const metadata: Metadata = {
 
 // ---- Types ----
 type TagItem = { title: string };
-type Experience = { title: string; role: string };
-type ChallengeItem = { title: string };
 type EducationItem = { Bachelor: string };
 type MusicItem = { title: string; role: string };
 type PastimeItem = { title: string; role: string };
@@ -27,10 +25,7 @@ type Profile = {
   born: string;
   role: string;
   location: string;
-  skills: TagItem[];
   tools: TagItem[];
-  occupation: Experience[];
-  challenge: ChallengeItem[];
   education: EducationItem[];
   music: MusicItem[];
   Pastimes: PastimeItem[];
@@ -42,17 +37,12 @@ const profile: Profile = {
   born: "1998",
   role: "Aerospace H.I. QA / Enjoy Music",
   location: "Japan",
-
-tools: [
-  { title: "Macintosh" },
-],
+  tools: [{ title: "Macintosh" }],
   education: [{ Bachelor: "理学学士" }],
-  
   music: [
     {
       title: "Love",
-      role:
-        "The Beatles, 小室哲哉, J-POP全般",
+      role: "The Beatles, 小室哲哉, J-POP全般",
     },
   ],
   Pastimes: [
@@ -79,47 +69,11 @@ export default function ProfilePage() {
         </p>
       </section>
 
-      {/* Skills & Tools */}
-      <section className="mb-10 grid gap-6 sm:grid-cols-2">
-        <Card title="Skills">
-          <BadgeList items={profile.skills} />
-        </Card>
+      {/* Tools */}
+      <section className="mb-10">
         <Card title="Tools">
           <BadgeList items={profile.tools} />
         </Card>
-      </section>
-
-      {/* Experience */}
-      <section className="mb-10">
-        <h2 className="mb-4 text-xl font-semibold">Experience</h2>
-        <div className="space-y-5">
-          {profile.occupation.map((exp) => (
-            <div
-              key={exp.title}
-              className="rounded-2xl border p-4 dark:border-gray-800"
-            >
-              <h3 className="text-base font-semibold">{exp.title}</h3>
-              <p className="mt-0.5 text-sm text-gray-600 dark:text-gray-400">
-                {exp.role}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Challenge */}
-      <section className="mb-10">
-        <h2 className="mb-4 text-xl font-semibold">Challenge</h2>
-        <ul className="space-y-2 text-[15px] text-gray-800 dark:text-gray-200">
-          {profile.challenge.map((c) => (
-            <li
-              key={c.title}
-              className="rounded-2xl border p-4 dark:border-gray-800"
-            >
-              {c.title}
-            </li>
-          ))}
-        </ul>
       </section>
 
       {/* Education */}
