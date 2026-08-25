@@ -35,14 +35,13 @@ type Profile = {
 const profile: Profile = {
   name: "Genbaneco",
   born: "1998",
-  role: "Aerospace H.I. QA / Enjoy Music",
+  role: "Aerospace H.I. QMS / Enjoy Music",
   location: "Japan",
   tools: [{ title: "Macintosh" }],
-  education: [{ Bachelor: "理学学士" }],
   music: [
     {
       title: "Love",
-      role: "The Beatles, 小室哲哉, J-POP全般",
+      role: "The Beatles, J-POP全般",
     },
   ],
   Pastimes: [
