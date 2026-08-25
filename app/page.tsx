@@ -25,38 +25,7 @@ export default async function Home() {
         <p className="text-lg mt-2 text-gray-700">
           （時々、改修工事失敗してエラーが出るかもしれません。ご愛嬌で♡）
         </p>
-
-        <p className="text-lg mt-2 text-gray-700">
-          各種お問い合わせは、X（旧Twitter）または Instagram のDMまで!
-        </p>
-
-        <div className="mt-4 flex flex-wrap gap-3">
-          <a
-            href="https://x.com/rg16dr8c9qcEh4y"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center rounded-full border px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
-            aria-label="X（旧Twitter）でDM"
-          >
-            XでDMする（@rg16dr8c9qcEh4y）
-            <span className="ml-1" aria-hidden>
-              →
-            </span>
-          </a>
-
-          <a
-            href="https://instagram.com/genbaneko1998"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center rounded-full border px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
-            aria-label="InstagramでDM"
-          >
-            InstagramでDMする（@genbaneko1998）
-            <span className="ml-1" aria-hidden>
-              →
-            </span>
-          </a>
-        </div>
+        
       </section>
 
       {/* 自動で記事リストを生成 */}
