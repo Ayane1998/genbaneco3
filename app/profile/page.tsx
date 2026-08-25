@@ -16,7 +16,6 @@ export const metadata: Metadata = {
 
 // ---- Types ----
 type TagItem = { title: string };
-type EducationItem = { Bachelor: string };
 type MusicItem = { title: string; role: string };
 type PastimeItem = { title: string; role: string };
 
@@ -26,7 +25,6 @@ type Profile = {
   role: string;
   location: string;
   tools: TagItem[];
-  education: EducationItem[];
   music: MusicItem[];
   Pastimes: PastimeItem[];
 };
@@ -82,22 +80,6 @@ export default function ProfilePage() {
     ))}
   </ul>
 </section>
-
-
-      {/* Education */}
-      <section className="mb-10">
-        <h2 className="mb-4 text-xl font-semibold">Education</h2>
-        <ul className="space-y-2 text-[15px] text-gray-800 dark:text-gray-200">
-          {profile.education.map((e, index) => (
-            <li
-              key={index}
-              className="rounded-2xl border p-4 dark:border-gray-800"
-            >
-              <p className="font-medium">{e.Bachelor}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
 
       {/* Music */}
       <section className="mb-10">
