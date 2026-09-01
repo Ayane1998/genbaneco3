@@ -26,17 +26,12 @@ export default async function Home() {
       return {
         slug,
         title: String(meta.title),
-
-        // gray-matter が Date として読み込んだ場合にも対応
-        date:
-          meta.date instanceof Date
-            ? meta.date.toISOString()
-            : String(meta.date),
+        date: String(meta.date),
       }
     })
     .filter((post): post is PostMeta => post !== null)
 
-  // 新しい日付の記事を上にする
+  // 新しい記事を上に並べる
   const sortedPosts = [...posts].sort(
     (a, b) =>
       new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -44,7 +39,6 @@ export default async function Home() {
 
   return (
     <main className="max-w-3xl mx-auto px-4 py-10">
-      {/* サイト紹介 */}
       <section className="mb-12">
         <h1 className="text-3xl font-bold mb-4">
           Genbaneco
@@ -59,7 +53,6 @@ export default async function Home() {
         </p>
       </section>
 
-      {/* 自動で記事リストを生成 */}
       <section>
         <h2 className="text-2xl font-semibold mb-4">
           最新の投稿
